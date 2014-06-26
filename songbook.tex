@@ -7,7 +7,7 @@
 %!TEX encoding = UTF-8 Unicode
 
 \documentclass[14pt]{article}
-\usepackage[chordbk]{songbook} 
+%\usepackage[chordbk]{songbook} 
 \usepackage{gchords}  
 \usepackage{geometry}
 \usepackage{rotating}
@@ -29,7 +29,6 @@
 \setromanfont[Mapping=tex-text]{Hoefler Text}
 \setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
 \setmonofont[Scale=MatchLowercase]{Andale Mono}
-\makeTitleContents
 \title{Different Class}
 \author{Songbook}
 \date{}                                           % Activate to display a given date or no date
@@ -65,24 +64,19 @@
 
 \newcommand{\AMaj}{\chord{t}{x, o, p2, p2, p2, o}{A}}
 
-\renewcommand{\STitle}[3][Y]{
-	\setcounter{SBVerseCnt}{0}
-	\setcounter{SBSectionCnt}{0}
-	\ifExcludeSong\relax
-	\else\keyIndex{{\protect\sbChord#3\protect\relax} -- #2}{\theSBSongCnt}\fi
-	\vspace{\SpaceAboveSTitle}
-	\if#1Y\begin{center}\fi
-	{\STitleFont\ #2}
-	\ifWordsOnly\relax\else{\STitleKeyFont}\fi
-	\if#1Y\end{center}\fi\STitleMarkboth{#2}{\relax}
-}
-\renewcommand{\CpyRt}[3][Y]{\relax}
-\renewcommand{\WAndM}[2][Y]{\relax}
+\newcounter{SongVerseCnt}
 
-\renewenvironment{song}[2]
+\newenvironment{myenumerate}{%
+  \edef\backupindent{\the\parindent}
+  \enumerate
+  \setlength{\parindent}{\backupindent}
+}{\endenumerate}
+
+
+\newenvironment{song}[2]
 {
-	\setcounter{SBVerseCnt}{0}
-	\keyIndex{#1}{\theSBSongCnt}
+	\setcounter{SongVerseCnt}{0}
+	%\keyIndex{#1}{\theSBSongCnt}
 
 		\begin{center}
 			\section*{#1}
@@ -90,10 +84,28 @@
 		\end{center}
 	\begin{multicols}{2}
 \normalsize
+\begin{myenumerate}
 }{
+\end{myenumerate}
 \end{multicols}
+\newpage
 }
 
+
+\definecolor{blue}{rgb}{0.2, 0.5, 0.5}
+
+\newenvironment{SongVerse}
+{
+	%\stepcounter{SongVerseCnt}
+	\item
+	\setlength{\parindent}{0cm}
+}{
+\newcommand{\SBChordRaise}{2.25ex}
+}
+\newcommand{\ch}[2]{
+	\makebox[0pt][l]{\raisebox{2.5ex}{\color{blue}\sffamily \,\,#1}}
+	\makebox{#2}
+}
 
 
 
@@ -105,11 +117,8 @@
 
 \newpage
 
-\section*{Table Of Contents}
-
-\input{songbook.toc}
+\tableofcontents 
 \newpage
-
 
 \begin{song}{Mis-Shapes}{
 
@@ -120,78 +129,74 @@
 	
 }
 
-	 \begin{SBVerse}
-		\Ch{A}{Mis-shapes}, mistakes, misfits. 
+	 \begin{SongVerse}
+		\ch{A}{Mis-shapes}, mistakes, misfits. 
 
-		\Ch{E}{Raised} on a diet of broken biscuits, oh
+		\ch{E}{Raised} on a diet of broken biscuits, oh
 
-		\Ch{F#m}{We} don't look the same as you
+		\ch{F\#m}{We} don't look the same as you
 		
-		\Ch{D}{We} don't do the things you do,
+		\ch{D}{We} don't do the things you do,
 		
-		But \Ch{D7}{we} live around here too, oh really. 
-	 \end{SBVerse}
+		But \ch{D7}{we} live around here too, oh really. 
+	 \end{SongVerse}
 
-	 \begin{SBVerse}
-		\Ch{A}{Mis-shapes}, mistakes, misfits,
+	 \begin{SongVerse}
+		\ch{A}{Mis-shapes}, mistakes, misfits,
 
-		We'd \Ch{E}{like} to go to town but we can't risk it, oh \Ch{F#m}{} 
+		We'd \ch{E}{like} to go to town but we can't risk it, oh \ch{F\#m}{} 
 
-		'Cos they just want to keep us out. \Ch{D}{} 
+		'Cos they just want to keep us out. \ch{D}{} 
 		
 		You could end up with a smack in the mouth
 
-		\Ch{D7}{Just} for standing out, now really.
-	 \end{SBVerse}
+		\ch{D7}{Just} for standing out, now really.
+	 \end{SongVerse}
 
-	 \begin{SBVerse}
-		\Ch{A}{Mis-shapes}, mistakes, misfits. 
+	 \begin{SongVerse}
+		\ch{A}{Mis-shapes}, mistakes, misfits. 
+		\ch{E}{Raised} on a diet of broken biscuits, oh
+		\ch{F\#m}{We} don't look the same as you
+		\ch{D}{We} don't do the things you do,	
+		But \ch{D7}{we} live around here too, oh really. 
+	 \end{SongVerse}
 
-		\Ch{E}{Raised} on a diet of broken biscuits, oh
 
-		\Ch{F#m}{We} don't look the same as you
+	 \begin{SongVerse}
+		\ch{A}{Mis-shapes}, mistakes, misfits. 
+
+		\ch{E}{Raised} on a diet of broken biscuits, oh
+
+		\ch{F\#m}{We} don't look the same as you
 		
-		\Ch{D}{We} don't do the things you do,
+		\ch{D}{We} don't do the things you do,
 		
-		But \Ch{D7}{we} live around here too, oh really. 
-	 \end{SBVerse}
+		But \ch{D7}{we} live around here too, oh really. 
+	 \end{SongVerse}
 
+	 \begin{SongVerse}
+		\ch{A}{Mis-shapes}, mistakes, misfits. 
 
-	 \begin{SBVerse}
-		\Ch{A}{Mis-shapes}, mistakes, misfits. 
+		\ch{E}{Raised} on a diet of broken biscuits, oh
 
-		\Ch{E}{Raised} on a diet of broken biscuits, oh
-
-		\Ch{F#m}{We} don't look the same as you
+		\ch{F\#m}{We} don't look the same as you
 		
-		\Ch{D}{We} don't do the things you do,
+		\ch{D}{We} don't do the things you do,
 		
-		But \Ch{D7}{we} live around here too, oh really. 
-	 \end{SBVerse}
+		But \ch{D7}{we} live around here too, oh really. 
+	 \end{SongVerse}
 
-	 \begin{SBVerse}
-		\Ch{A}{Mis-shapes}, mistakes, misfits. 
+	 \begin{SongVerse}
+		\ch{A}{Mis-shapes}, mistakes, misfits. 
 
-		\Ch{E}{Raised} on a diet of broken biscuits, oh
+		\ch{E}{Raised} on a diet of broken biscuits, oh
 
-		\Ch{F#m}{We} don't look the same as you
+		\ch{F\#m}{We} don't look the same as you
 		
-		\Ch{D}{We} don't do the things you do,
+		\ch{D}{We} don't do the things you do,
 		
-		But \Ch{D7}{we} live around here too, oh really. 
-	 \end{SBVerse}
-
-	 \begin{SBVerse}
-		\Ch{A}{Mis-shapes}, mistakes, misfits. 
-
-		\Ch{E}{Raised} on a diet of broken biscuits, oh
-
-		\Ch{F#m}{We} don't look the same as you
-		
-		\Ch{D}{We} don't do the things you do,
-		
-		But \Ch{D7}{we} live around here too, oh really. 
-	 \end{SBVerse}
+		But \ch{D7}{we} live around here too, oh really. 
+	 \end{SongVerse}
 
 \end{song}
 
