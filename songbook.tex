@@ -1,0 +1,202 @@
+% XeLaTeX can use any Mac OS X font. See the setromanfont command below.
+% Input to XeLaTeX is full Unicode, so Unicode characters can be typed directly into the source.
+
+% The next lines tell TeXShop to typeset with xelatex, and to open and save the source with Unicode encoding.
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[14pt]{article}
+\usepackage[chordbk]{songbook} 
+\usepackage{gchords}  
+\usepackage{geometry}
+\usepackage{rotating}
+\usepackage{multicol}
+
+\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+% Will Robertson's fontspec.sty can be used to simplify font choices.
+% To experiment, open /Applications/Font Book to examine the fonts provided on Mac OS X,
+% and change "Hoefler Text" to any of these choices.
+
+\usepackage{fontspec,xltxtra,xunicode}
+
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Hoefler Text}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Andale Mono}
+\makeTitleContents
+\title{Different Class}
+\author{Songbook}
+\date{}                                           % Activate to display a given date or no date
+% Chords 
+
+% C
+\newcommand{\CMaj}{\chord{t}{x, p3, p2, o, p1, o}{C}}
+\newcommand{\CMajSeven}{\chord{t}{x, p3, p2, o, o, o}{CMaj7}}
+\newcommand{\CSeven}{\chord{t}{x, p3, p2, p3, p1, o}{C7}}
+
+% D
+
+\newcommand{\DMaj}{\chord{t}{x, x, o, p2, p3, p2}{D}}
+\newcommand{\DSeven}{\chord{t}{x, x, o, p2, p1, p2}{D7}}
+
+% E
+
+\newcommand{\EMaj}{\chord{t}{o, p2, p2, p1, o, o}{E}}
+
+
+
+% F#
+
+\newcommand{\Fshm}{\chord{t}{p2, p4, p4, p2, p2, p2}{F\#m}}
+
+
+%G
+\newcommand{\GMaj}{\chord{t}{p3, p2, o,o, o, p3}{G}}
+\newcommand{\GMajSeven}{\chord{t}{p3, p2, o,o, o, p2}{GMaj7}}
+\newcommand{\GSeven}{\chord{t}{p3, p2, o,o, o, p1}{G7}}
+
+%A
+
+\newcommand{\AMaj}{\chord{t}{x, o, p2, p2, p2, o}{A}}
+
+\renewcommand{\STitle}[3][Y]{
+	\setcounter{SBVerseCnt}{0}
+	\setcounter{SBSectionCnt}{0}
+	\ifExcludeSong\relax
+	\else\keyIndex{{\protect\sbChord#3\protect\relax} -- #2}{\theSBSongCnt}\fi
+	\vspace{\SpaceAboveSTitle}
+	\if#1Y\begin{center}\fi
+	{\STitleFont\ #2}
+	\ifWordsOnly\relax\else{\STitleKeyFont}\fi
+	\if#1Y\end{center}\fi\STitleMarkboth{#2}{\relax}
+}
+\renewcommand{\CpyRt}[3][Y]{\relax}
+\renewcommand{\WAndM}[2][Y]{\relax}
+
+\renewenvironment{song}[2]
+{
+	\setcounter{SBVerseCnt}{0}
+	\keyIndex{#1}{\theSBSongCnt}
+
+		\begin{center}
+			\section*{#1}
+			#2
+		\end{center}
+	\begin{multicols}{2}
+\normalsize
+}{
+\end{multicols}
+}
+
+
+
+
+% \def\numfrets{4}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\section*{Table Of Contents}
+
+\input{songbook.toc}
+\newpage
+
+
+\begin{song}{Mis-Shapes}{
+
+	\mbox{ \AMaj \EMaj \Fshm \DMaj \DSeven}
+
+
+	\mbox{ \GMaj \GMajSeven \GSeven \CMaj \CMajSeven \CSeven }
+	
+}
+
+	 \begin{SBVerse}
+		\Ch{A}{Mis-shapes}, mistakes, misfits. 
+
+		\Ch{E}{Raised} on a diet of broken biscuits, oh
+
+		\Ch{F#m}{We} don't look the same as you
+		
+		\Ch{D}{We} don't do the things you do,
+		
+		But \Ch{D7}{we} live around here too, oh really. 
+	 \end{SBVerse}
+
+	 \begin{SBVerse}
+		\Ch{A}{Mis-shapes}, mistakes, misfits,
+
+		We'd \Ch{E}{like} to go to town but we can't risk it, oh \Ch{F#m}{} 
+
+		'Cos they just want to keep us out. \Ch{D}{} 
+		
+		You could end up with a smack in the mouth
+
+		\Ch{D7}{Just} for standing out, now really.
+	 \end{SBVerse}
+
+	 \begin{SBVerse}
+		\Ch{A}{Mis-shapes}, mistakes, misfits. 
+
+		\Ch{E}{Raised} on a diet of broken biscuits, oh
+
+		\Ch{F#m}{We} don't look the same as you
+		
+		\Ch{D}{We} don't do the things you do,
+		
+		But \Ch{D7}{we} live around here too, oh really. 
+	 \end{SBVerse}
+
+
+	 \begin{SBVerse}
+		\Ch{A}{Mis-shapes}, mistakes, misfits. 
+
+		\Ch{E}{Raised} on a diet of broken biscuits, oh
+
+		\Ch{F#m}{We} don't look the same as you
+		
+		\Ch{D}{We} don't do the things you do,
+		
+		But \Ch{D7}{we} live around here too, oh really. 
+	 \end{SBVerse}
+
+	 \begin{SBVerse}
+		\Ch{A}{Mis-shapes}, mistakes, misfits. 
+
+		\Ch{E}{Raised} on a diet of broken biscuits, oh
+
+		\Ch{F#m}{We} don't look the same as you
+		
+		\Ch{D}{We} don't do the things you do,
+		
+		But \Ch{D7}{we} live around here too, oh really. 
+	 \end{SBVerse}
+
+	 \begin{SBVerse}
+		\Ch{A}{Mis-shapes}, mistakes, misfits. 
+
+		\Ch{E}{Raised} on a diet of broken biscuits, oh
+
+		\Ch{F#m}{We} don't look the same as you
+		
+		\Ch{D}{We} don't do the things you do,
+		
+		But \Ch{D7}{we} live around here too, oh really. 
+	 \end{SBVerse}
+
+\end{song}
+
+\begin{song}{Pencil Skirt}
+
+\end{song}
+
+\end{document}
