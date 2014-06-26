@@ -13,6 +13,14 @@
 \usepackage{rotating}
 \usepackage{multicol}
 \usepackage{enumitem,xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 \geometry{a4paper}                   % ... or a4paper or a5paper or ... 
 %\geometry{landscape}                % Activate for for rotated page geometry
@@ -25,6 +33,7 @@
 % and change "Hoefler Text" to any of these choices.
 
 \usepackage{fontspec,xltxtra,xunicode}
+\newcommand{\up}[1]{\textsuperscript{#1}}
 
 \renewcommand\thesection{}
 
@@ -39,13 +48,13 @@
 
 % C
 \newcommand{\CMaj}{\chord{t}{x, p3, p2, o, p1, o}{C}}
-\newcommand{\CMajSeven}{\chord{t}{x, p3, p2, o, o, o}{CMaj7}}
-\newcommand{\CSeven}{\chord{t}{x, p3, p2, p3, p1, o}{C7}}
+\newcommand{\CMajSeven}{\chord{t}{x, p3, p2, o, o, o}{C\up{maj7}}}
+\newcommand{\CSeven}{\chord{t}{x, p3, p2, p3, p1, o}{C\up7}}
 
 % D
 
 \newcommand{\DMaj}{\chord{t}{x, x, o, p2, p3, p2}{D}}
-\newcommand{\DSeven}{\chord{t}{x, x, o, p2, p1, p2}{D7}}
+\newcommand{\DSeven}{\chord{t}{x, x, o, p2, p1, p2}{D\up7}}
 
 % E
 
@@ -60,8 +69,8 @@
 
 %G
 \newcommand{\GMaj}{\chord{t}{p3, p2, o,o, o, p3}{G}}
-\newcommand{\GMajSeven}{\chord{t}{p3, p2, o,o, o, p2}{GMaj7}}
-\newcommand{\GSeven}{\chord{t}{p3, p2, o,o, o, p1}{G7}}
+\newcommand{\GMajSeven}{\chord{t}{p3, p2, o,o, o, p2}{G\up{maj7}}}
+\newcommand{\GSeven}{\chord{t}{p3, p2, o,o, o, p1}{G\up 7}}
 
 %A
 
@@ -111,7 +120,6 @@
 }
 
 
-
 % \def\numfrets{4}
 
 \begin{document}
@@ -124,5 +132,6 @@
 \newpage
 
 \include{misshapes}
+\include{pencilskirt}
 
 \end{document}
