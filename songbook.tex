@@ -22,9 +22,7 @@
     urlcolor=black
 }
 
-\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
-%\geometry{landscape}                % Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\geometry{a4paper}                 
 \usepackage{graphicx}
 \usepackage{amssymb}
 
@@ -33,9 +31,6 @@
 % and change "Hoefler Text" to any of these choices.
 
 \usepackage{fontspec,xltxtra,xunicode}
-\newcommand{\up}[1]{\textsuperscript{#1}}
-
-\renewcommand\thesection{}
 
 \defaultfontfeatures{Mapping=tex-text}
 \setromanfont[Mapping=tex-text]{Hoefler Text}
@@ -44,22 +39,59 @@
 \title{Different Class}
 \author{Songbook}
 \date{}                                           % Activate to display a given date or no date
+
+
+
+%Override LaTEX defaults
+
+\newcommand{\up}[1]{\textsuperscript{#1}}
+\renewcommand\thesection{} % No number in section title
+
+
 % Chords 
+
+\let\oldchord\chord
+\renewcommand{\chord}[3]{\oldchord{#1}{#2}{\sffamily#3}}
+\newcommand{\atfret}[2]{
+
+	\parbox[c][3.25em][b]{7pt}{
+
+			\makebox[10pt]{#1}
+			\makebox[10pt]{\git{\small(#2th fret)}}
+			%\raisebox{-2.5ex}{\git{(#2th fret)}}
+		}
+}
+
+
 
 % C
 \newcommand{\CMaj}{\chord{t}{x, p3, p2, o, p1, o}{C}}
 \newcommand{\CMajSeven}{\chord{t}{x, p3, p2, o, o, o}{C\up{maj7}}}
 \newcommand{\CSeven}{\chord{t}{x, p3, p2, p3, p1, o}{C\up7}}
+\newcommand{\CMajShE}{\chord{8}{p1, p3, p3, p2, p1, p1}{\atfret{C}{8}}}
+\newcommand{\CMajsusFour}{\chord{t}{x, p3, p3, o, p1, o}{C\up{sus4}}}
+
+
 
 % D
 
 \newcommand{\DMaj}{\chord{t}{x, x, o, p2, p3, p2}{D}}
 \newcommand{\DSeven}{\chord{t}{x, x, o, p2, p1, p2}{D\up7}}
+\newcommand{\DMajShA}{\chord{5}{x, p1, p3, p3, p3, p1}{\atfret{D}{5}}}
 
 % E
 
 \newcommand{\EMaj}{\chord{t}{o, p2, p2, p1, o, o}{E}}
+\newcommand{\Em}{\chord{t}{o, p2, p2, o, o, o}{Em}}
+\newcommand{\EmShAm}{\chord{7}{x, p1, p3, p3, p2, p1}{\atfret{Em}{7}}}
 
+\newcommand{\EmaddC}{\chord{t}{o, p2, p2, o, p1, o}{Em\up{addC}}}
+\newcommand{\EmSix}{\chord{t}{o, p2, p2, o, p2, o}{Em\up{6}}}
+
+
+% F
+
+\newcommand{\FMaj}{\chord{t}{p1, p3, p3, p2, p1, p1}{F}}
 
 
 % F#
@@ -71,12 +103,16 @@
 \newcommand{\GMaj}{\chord{t}{p3, p2, o,o, o, p3}{G}}
 \newcommand{\GMajSeven}{\chord{t}{p3, p2, o,o, o, p2}{G\up{maj7}}}
 \newcommand{\GSeven}{\chord{t}{p3, p2, o,o, o, p1}{G\up 7}}
+\newcommand{\GMajShE}{\chord{3}{p1, p3, p3,p2, p1, p1}{\atfret{G}{3}}}
 
 %A
 
 \newcommand{\AMaj}{\chord{t}{x, o, p2, p2, p2, o}{A}}
 
-\newcounter{SongVerseCnt}
+
+
+\newcommand{\git}[1]{\color{gray}{\textit{#1}}\color{black}}
+
 
 \newenvironment{myenumerate}{%
   \edef\backupindent{\the\parindent}
@@ -84,39 +120,33 @@
   \setlength{\parindent}{\backupindent}
 }{\end{enumerate}}
 
+\setlength{\parindent}{0cm}
 
 \newenvironment{song}[2]
 {
-	\setcounter{SongVerseCnt}{0}
-	%\keyIndex{#1}{\theSBSongCnt}
-
-		\begin{center}
-			\section{#1}
-			#2
-		\end{center}
+	\begin{center}
+		\section{#1}
+		#2
+	\end{center}
 	\begin{multicols}{2}
-\normalsize
-\begin{myenumerate}
+		\normalsize
+		\begin{myenumerate}
 }{
-\end{myenumerate}
-\end{multicols}
-\newpage
+		\end{myenumerate}
+	\end{multicols}
+	\newpage
 }
 
 
 \definecolor{blue}{rgb}{0.2, 0.5, 0.5}
-
 \newenvironment{SongVerse}
 {
-	%\stepcounter{SongVerseCnt}
 	\item
-	\setlength{\parindent}{0cm}
 }{
-\newcommand{\SBChordRaise}{2.25ex}
+\vspace{10pt}
 }
-\newcommand{\ch}[2]{
+\newcommand{\ch}[1]{
 	\makebox[0pt][l]{\raisebox{2.5ex}{\color{blue}\sffamily \,\,#1}}
-	\makebox{#2}
 }
 
 
@@ -133,5 +163,6 @@
 
 \include{misshapes}
 \include{pencilskirt}
+\include{commonpeople}
 
 \end{document}
