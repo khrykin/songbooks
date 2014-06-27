@@ -1,7 +1,7 @@
 Different Class Songbook
 ==============
 
-Pulp's Different Class Songbook in LaTEX
+Pulp's Different Class Songbook in XeLaTEX
 
 ##Typeset
 
