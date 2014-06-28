@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2014.1.20)  26 JUN 2014 20:37
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012) (format=xelatex 2014.1.20)  29 JUN 2014 01:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,175 +756,38 @@ LaTeX Info: Redefining \LaTeXe on input line 219.
 )
 \xxt@tempbox=\box64
 )
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font Hoefler Text does not contain any OpenType `Script' information.
-.................................................
-\g_fontspec_family_Hoefler Text_int=\count278
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'HoeflerText(0)' created for font 'Hoefler Text' with options
-. [Mapping=tex-text,Mapping=tex-text].
-. 
-. This font family consists of the following shapes:
-. 
-. * 'normal' with NFSS spec.:
-. <->"Hoefler Text/AAT:mapping=tex-text;mapping=tex-text;"
-. 
-. * 'small caps' with NFSS spec.:
-. <->"Hoefler Text/AAT:mapping=tex-text;mapping=tex-text;Letter Case=Small
-. Caps;"
-. 
-. * 'bold' with NFSS spec.:
-. <->"Hoefler Text/B/AAT:mapping=tex-text;mapping=tex-text;"
-. 
-. * 'bold small caps' with NFSS spec.:
-. <->"Hoefler Text/B/AAT:mapping=tex-text;mapping=tex-text;Letter Case=Small
-. Caps;"
-. 
-. * 'italic' with NFSS spec.:
-. <->"Hoefler Text/I/AAT:mapping=tex-text;mapping=tex-text;"
-. 
-. * 'italic small caps' with NFSS spec.:
-. <->"Hoefler Text/I/AAT:mapping=tex-text;mapping=tex-text;Letter Case=Small
-. Caps;"
-. 
-. * 'bold italic' with NFSS spec.:
-. <->"Hoefler Text/BI/AAT:mapping=tex-text;mapping=tex-text;"
-. 
-. * 'bold italic small caps' with NFSS spec.:
-. <->"Hoefler Text/BI/AAT:mapping=tex-text;mapping=tex-text;Letter Case=Small
-. Caps;"
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font Gill Sans does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Gill Sans scale = 0.9475554560.
-.................................................
-\g_fontspec_family_Gill Sans_int=\count279
-.................................................
-. fontspec info: "set-scale"
-. 
-. Gill Sans scale = 0.9475554560.
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Gill Sans/B scale = 0.8548906810.
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Gill Sans/I scale = 0.9475554560.
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Gill Sans/BI scale = 0.8548906810.
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'GillSans(0)' created for font 'Gill Sans' with options
-. [Mapping=tex-text,Scale=MatchLowercase,Mapping=tex-text].
-. 
-. This font family consists of the following shapes:
-. 
-. * 'normal' with NFSS spec.:
-. <->s*[0.9475554560]"Gill Sans/AAT:mapping=tex-text;mapping=tex-text;"
-. 
-. * 'bold' with NFSS spec.:
-. <->s*[0.8548906810]"Gill Sans/B/AAT:mapping=tex-text;mapping=tex-text;"
-. 
-. * 'italic' with NFSS spec.:
-. <->s*[0.9475554560]"Gill Sans/I/AAT:mapping=tex-text;mapping=tex-text;"
-. 
-. * 'bold italic' with NFSS spec.:
-. <->s*[0.8548906810]"Gill Sans/BI/AAT:mapping=tex-text;mapping=tex-text;"
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font Andale Mono does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "set-scale"
-. 
-. Andale Mono scale = 0.8364216720.
-.................................................
-\g_fontspec_family_Andale Mono_int=\count280
-.................................................
-. fontspec info: "set-scale"
-. 
-. Andale Mono scale = 0.8364216720.
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font Andale Mono/B (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font Andale Mono/I (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font Andale Mono/BI (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'AndaleMono(0)' created for font 'Andale Mono' with options
-. [Mapping=tex-text,Scale=MatchLowercase].
-. 
-. This font family consists of the following shapes:
-. 
-. * 'normal' with NFSS spec.:
-. <->s*[0.8364216720]"Andale Mono/AAT:mapping=tex-text;"
-.................................................
-
 
 LaTeX Warning: Unused global option(s):
     [14pt].
 
-(./songbook.aux (./misshapes.aux) (./pencilskirt.aux) (./commonpeople.aux))
+(./songbook.aux (./misshapes.aux) (./pencilskirt.aux) (./commonpeople.aux)
+(./disco2000.aux))
 \openout1 = `songbook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 155.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 155.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/tipa/t3cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 227.
+LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 227.
+LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 227.
+LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 227.
+LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 227.
+LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 227.
+LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 227.
+LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 227.
+LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 227.
+LaTeX Font Info:    ... okay on input line 227.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 227.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 227.
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 155.
-
+LaTeX Font Info:    ... okay on input line 227.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -960,18 +823,18 @@ LaTeX Font Info:    ... okay on input line 155.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box65
-Package hyperref Info: Link coloring ON on input line 155.
+Package hyperref Info: Link coloring ON on input line 227.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count281
+\c@section@level=\count278
 )
-LaTeX Info: Redefining \ref on input line 155.
-LaTeX Info: Redefining \pageref on input line 155.
-LaTeX Info: Redefining \nameref on input line 155.
+LaTeX Info: Redefining \ref on input line 227.
+LaTeX Info: Redefining \pageref on input line 227.
+LaTeX Info: Redefining \nameref on input line 227.
 
 (./songbook.out) (./songbook.out)
 \@outlinefile=\write3
@@ -984,81 +847,68 @@ LaTeX Info: Redefining \nameref on input line 155.
 .................................................
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 155.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 155.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 155.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 155.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 155.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 155.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 155.
-LaTeX Font Info:    Redeclaring math accent \check on input line 155.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 155.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 155.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 155.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 155.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 155.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 227.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 227.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 227.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 227.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 227.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 227.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 227.
+LaTeX Font Info:    Redeclaring math accent \check on input line 227.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 227.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 227.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 227.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 227.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 227.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 155.
+(Font)              `operators' in the math version `normal' on input line 227.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/HoeflerText(0)/m/n on input line 15
-5.
+(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 227.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 155.
+(Font)              `operators' in the math version `bold' on input line 227.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/HoeflerText(0)/m/n on input line 1
-55.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 227.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/HoeflerText(0)/m/n --> EU1/HoeflerText(0)/m/n on in
-put line 155.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 227.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  EU1/HoeflerText(0)/m/n --> EU1/HoeflerText(0)/m/n on in
-put line 155.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 227.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/HoeflerText(0)/m/it on input line 
-155.
+(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 227.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/HoeflerText(0)/bx/n on input line 
-155.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 227.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/GillSans(0)/m/n on input line 155.
-
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 227.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/AndaleMono(0)/m/n on input line 15
-5.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 227.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/HoeflerText(0)/m/n --> EU1/HoeflerText(0)/bx/n on i
-nput line 155.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 227.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  EU1/HoeflerText(0)/m/n --> EU1/HoeflerText(0)/bx/n on i
-nput line 155.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 227.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/HoeflerText(0)/bx/it on input lin
-e 155.
+(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 227.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/GillSans(0)/bx/n on input line 15
-5.
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 227.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/AndaleMono(0)/bx/n on input line 1
-55.
-LaTeX Font Info:    Try loading font information for U+msa on input line 158.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 227.
+LaTeX Font Info:    Try loading font information for U+msa on input line 230.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 158.
+LaTeX Font Info:    Try loading font information for U+msb on input line 230.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -1073,24 +923,19 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 \tf@toc=\write4
 \openout4 = `songbook.toc'.
 
- [2]
+ [2] [3]
 \openout2 = `misshapes.aux'.
 
- (./misshapes.tex
-LaTeX Font Info:    Font shape `EU1/GillSans(0)/m/n' will be
-(Font)              scaled to size 9.47556pt on input line 14.
-LaTeX Font Info:    Font shape `EU1/GillSans(0)/m/n' will be
-(Font)              scaled to size 6.63289pt on input line 14.
- [3
+ (./misshapes.tex [4
 
-] [4])
+] [5])
 \openout2 = `pencilskirt.aux'.
 
  (./pencilskirt.tex
-LaTeX Font Info:    Font shape `EU1/GillSans(0)/m/it' will be
-(Font)              scaled to size 9.47556pt on input line 11.
-LaTeX Font Info:    Font shape `EU1/GillSans(0)/m/it' will be
-(Font)              scaled to size 8.528pt on input line 11.
+LaTeX Font Info:    Font shape `EU1/lmss/m/it' in size <10> not available
+(Font)              Font shape `EU1/lmss/m/sl' tried instead on input line 11.
+LaTeX Font Info:    Font shape `EU1/lmss/m/it' in size <9> not available
+(Font)              Font shape `EU1/lmss/m/sl' tried instead on input line 11.
 
 Overfull \hbox (3.0pt too wide) in paragraph at lines 11--11
 [][]
@@ -1131,22 +976,10 @@ Overfull \hbox (3.0pt too wide) in paragraph at lines 11--11
 [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--118
-\EU1/HoeflerText(0)/m/n/10 ———————-3-3–1—| G|—————�
-��
- []
+[6
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--118
-\EU1/HoeflerText(0)/m/n/10 A|———————————-| E|————
-
- []
-
-[5
-
-
-] [6])
+])
 \openout2 = `commonpeople.aux'.
 
  (./commonpeople.tex
@@ -1164,20 +997,27 @@ l.14 \end{song}
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
- (./songbook.aux (./misshapes.aux) (./pencilskirt.aux) (./commonpeople.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 168.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 168.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
+\openout2 = `disco2000.aux'.
+
+ (./disco2000.tex [8
+
+
+] [9])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
+ (./songbook.aux (./misshapes.aux)
+(./pencilskirt.aux) (./commonpeople.aux) (./disco2000.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 241.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 20114 strings out of 494004
- 392003 string characters out of 3150890
- 441730 words of memory out of 3000000
- 23114 multiletter control sequences out of 15000+200000
- 10240 words of font info for 72 fonts, out of 3000000 for 9000
+ 20028 strings out of 494004
+ 388699 string characters out of 3150890
+ 441901 words of memory out of 3000000
+ 23050 multiletter control sequences out of 15000+200000
+ 10396 words of font info for 57 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 36i,11n,49p,560b,608s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,11n,49p,560b,608s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on songbook.pdf (7 pages).
+Output written on songbook.pdf (9 pages).
