@@ -6,7 +6,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[14pt]{article}
+\documentclass[11pt,a5paper]{article}
 %\usepackage[chordbk]{songbook} 
 \usepackage{gchords}  
 \usepackage{geometry}
@@ -30,23 +30,60 @@
 % To experiment, open /Applications/Font Book to examine the fonts provided on Mac OS X,
 % and change "Hoefler Text" to any of these choices.
 
+
+
+	%Enables +- operations for lengths
+	\usepackage{calc}
+
+     \let\defaultoddsidemargin\oddsidemargin
+     \setlength{\oddsidemargin}{\defaultoddsidemargin-30pt}
+     \let\defaulttextwidth\textwidth
+     \setlength{\textwidth}{\defaulttextwidth+40pt}
+
+
 \usepackage{fontspec,xltxtra,xunicode}
+\usepackage{xcolor}
 
 \defaultfontfeatures{Mapping=tex-text}
 %\setromanfont[Mapping=tex-text]{Hoefler Text}
 %\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
 %\setmonofont[Scale=MatchLowercase]{Andale Mono}
-\title{Different Class}
-\author{Songbook}
+\title{\Huge \color{white} Different Class}
+\author{\Large \color{white} Songbook with chords}
 \date{}                                           % Activate to display a given date or no date
 
 
 \font\fingerfont=cmr3
 
-%Override LaTEX defaults
+% Override LaTEX defaults
 
 \newcommand{\up}[1]{\textsuperscript{#1}}
 \renewcommand\thesection{} % No number in section title
+
+
+% Style for title page
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=\paperwidth,%
+keepaspectratio]{cover2.png}%
+\vfill
+}}}
+
+
+
+\usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
+\fancyhf{}% Clear all headers/footers
+\renewcommand{\headrulewidth}{0pt}% No header rule
+\renewcommand{\footrulewidth}{0pt}% No footer rule
+\fancyfoot[C]{\vspace{30pt}
+\texttt{github: khrykin/differentclass} \\[0.5cm] \the\year}%
+
+
+
 
 
 % Chords 
@@ -225,14 +262,15 @@
 % \def\numfrets{4}
 
 \begin{document}
+\AddToShipoutPicture*{\BackgroundPic}
 
 \maketitle
-
+\thispagestyle{fancy}
+\ClearShipoutPicture
 \newpage
 
 \tableofcontents 
 \newpage
-\tab{\p{1}{2}{3}}
 \include{misshapes}
 \include{pencilskirt}
 \include{commonpeople}

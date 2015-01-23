@@ -1,4 +1,0 @@
-\contentsline {section}{\numberline {}Mis-Shapes}{4}{section.1}
-\contentsline {section}{\numberline {}Pencil Skirt}{6}{section.2}
-\contentsline {section}{\numberline {}Common People}{7}{section.3}
-\contentsline {section}{\numberline {}Disco 2000}{8}{section.4}
