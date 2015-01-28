@@ -14,9 +14,7 @@
 	
 	\usepackage{graphicx}
 	\usepackage{amssymb}
-	
-	
-	
+		
 	
 		% Enables +- operations for lengths
 		 \usepackage{calc}
@@ -109,11 +107,19 @@
 	\ifx&#1&%
 	  % #1 is empty
 	\else
-		\vspace{10pt}
 		\git{#1}\\
 	\fi
 
-	\mbox{#2}\\
+	\mbox{#2}\\[1em]
+	}
+	
+	\newcommand\tabset[2][]{
+		\ifx&#1&%
+		  % #1 is empty
+		\else
+			\git{#1}\\[0.25em]
+		\fi
+			#2\\[1em]
 	}
 
 % --> Chords
