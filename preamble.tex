@@ -1,5 +1,5 @@
 % 	Basics --> 
-	\usepackage[margin=1.5cm, left=1cm, right=1.5cm, bottom=3cm]{geometry}
+	\usepackage[margin=1.5cm, left=1.5cm, right=1.5cm, bottom=3cm]{geometry}
 	\usepackage{rotating}
 	\usepackage{multicol}
 	\usepackage{enumitem,xcolor}
@@ -97,7 +97,7 @@
 		\parbox[c][3.25em][b]{7pt}{
 	
 				\makebox[10pt]{#1}
-				\makebox[10pt]{\git{\small(#2th fret)}}
+				\makebox[10pt]{\git{\footnotesize(#2th fret)}}
 				%\raisebox{-2.5ex}{\git{(#2th fret)}}
 			}
 	}
@@ -130,31 +130,75 @@
 	  \setlength{\parindent}{\backupindent}
 	}{\end{enumerate}}
 	
+	% No indentations in pars beginnings
 	\setlength{\parindent}{0cm}
 	
+	\newcounter{versecounter}
+	\newcounter{choruscounter}
+	\newcounter{parcounter}
+
 	\newenvironment{song}[2]
 	{
+	\setcounter{versecounter}{0}
+	\setcounter{choruscounter}{0}
+	\setcounter{parcounter}{0}
 		\begin{center}
 			\section{#1}
 			#2
 		\end{center}
 		\begin{multicols}{2}
 			\normalsize
-			\begin{myenumerate}
 	}{
-			\end{myenumerate}
 		\end{multicols}
 		\newpage
 	}
 	
+	\newcommand{\versetitle}[1]{%
+		\begin{center}
+			\bfseries \itshape #1
+			\vspace{-0.5em}
+		\end{center}%
+	}
 	
 	\definecolor{blue}{rgb}{0.2, 0.5, 0.5}
-	\newenvironment{songverse}
+	\newenvironment{songverse}[1][Verse \theversecounter]
 	{
-		\item
+		\stepcounter{versecounter}
+		\stepcounter{parcounter}
+
+		\versetitle{#1}
+		\edef\backupindent{\the\parindent}
+	 	\begin{enumerate}[label=\color{gray}\theparcounter, leftmargin=*]
+	 	\setlength{\parindent}{\backupindent}\item
 	}{
-	\vspace{10pt}
+	\end{enumerate}
+	\vspace{1em}
 	}
+	
+	\newenvironment{songverse*}[1][Verse]{
+		\setcounter{versecounter}{\theversecounter-1}
+		\begin{songverse}[#1]
+	}{
+	\end{songverse}
+	}
+	
+	
+	
+	\newenvironment{songchorus}[1][Chorus \thechoruscounter]
+	{
+		\stepcounter{choruscounter}
+		\stepcounter{parcounter}
+
+		\versetitle{#1}
+		\edef\backupindent{\the\parindent}
+	 	\begin{enumerate}[label=\color{gray}\theparcounter, leftmargin=*]
+	 	\setlength{\parindent}{\backupindent}\item
+	}{
+	\end{enumerate}
+	\vspace{1em}
+	}	
+	
+	
 	\newcommand{\ch}[1]{\makebox[0pt][l]{\raisebox{1em}{\color{blue} \sffamily \small #1 }}}
 	
 
