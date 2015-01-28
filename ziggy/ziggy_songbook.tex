@@ -1,0 +1,32 @@
+\documentclass[10pt,a5paper]{article}
+
+\def\songbooktitle{The Rise and Fall of Ziggy Stardust and the Spiders from Mars}
+\def\backgroundimage{cover.png}
+
+\def\titlefootercolor{white}
+\def\titlecolor{white}
+
+\input{../preamble}
+
+\begin{document}
+% 	Title Page -->	
+	
+	\AddToShipoutPicture*{\BackgroundPic}
+		\maketitle
+		\thispagestyle{fancy}
+		\ClearShipoutPicture
+	
+	\newpage
+%--> Title Page
+	
+	\tableofcontents 
+	\newpage
+	
+%--> Songs includes	
+	
+	\include{fiveyears}
+
+	
+% 	Songs includes -->	
+
+\end{document}

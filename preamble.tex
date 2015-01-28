@@ -1,0 +1,165 @@
+% 	Basics --> 
+	\usepackage[margin=1.5cm, left=1cm, right=1.5cm, bottom=3cm]{geometry}
+	\usepackage{rotating}
+	\usepackage{multicol}
+	\usepackage{enumitem,xcolor}
+	\usepackage{hyperref}
+	\hypersetup{
+	    colorlinks,
+	    citecolor=black,
+	    filecolor=black,
+	    linkcolor=black,
+	    urlcolor=black
+	}
+	
+	\usepackage{graphicx}
+	\usepackage{amssymb}
+	
+	
+	
+	
+		% Enables +- operations for lengths
+		 \usepackage{calc}
+	
+%	     \let\defaultoddsidemargin\oddsidemargin
+%	     \setlength{\oddsidemargin}{\defaultoddsidemargin-30pt}
+%	     \let\defaulttextwidth\textwidth
+%	     \setlength{\textwidth}{\defaulttextwidth+40pt}
+	     
+%	     \let\defaulttopmargin\topmargin
+%	     \setlength{\topmargin}{\defaulttopmargin-30pt}
+%	     \let\defaulttextheight\textheight
+%	     \setlength{\textheight}{\defaulttextheight+60pt}
+	
+	
+	\usepackage{fontspec,xltxtra,xunicode}
+	\usepackage{xcolor}
+	
+	\defaultfontfeatures{Mapping=tex-text}
+	\setromanfont[Mapping=tex-text]{Century Schoolbook}
+	\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+	%\setmonofont[Scale=MatchLowercase]{Monaco}
+	\usepackage[10pt]{moresize}
+
+% --> Basics 
+
+
+% Override LaTEX defaults
+
+	\newcommand{\up}[1]{\textsuperscript{#1}}
+	\renewcommand\thesection{} % No number in section title
+	\renewcommand{\contentsname}{\centering Contents}
+
+% 	Style for title page -->
+
+	
+	\title{\HUGE \ifdefined\titlecolor\color{\titlecolor}\fi \songbooktitle}
+	\author{\LARGE \ifdefined\titlecolor\color{\titlecolor}\fi Songbook with chords}
+	\date{}  
+
+	\usepackage{eso-pic}
+	
+	\newcommand\BackgroundPic{%
+	\put(0,0){%
+	\parbox[b][\paperheight]{\paperwidth}{%
+	\vfill
+	\centering
+	\includegraphics[width=\paperwidth,%
+	keepaspectratio]{\backgroundimage}%
+	\vfill
+	}}}
+	
+	
+	
+	\usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
+	\fancyhf{}% Clear all headers/footers
+	\renewcommand{\headrulewidth}{0pt}% No header rule
+	\renewcommand{\footrulewidth}{0pt}% No footer rule
+	\fancyfoot[C]{%\vspace{30pt}
+	\ifdefined\titlefootercolor\color{\titlefootercolor}\fi
+	\texttt{github: khrykin/songbooks} \\[1em] \the\year}%
+
+%--> Style for title page
+
+
+
+
+% Chords -->
+	
+	\font\fingerfont=cmr3
+	
+	%\usepackage[chordbk]{songbook} 
+	\usepackage{gchords} 
+	\let\oldchord\chord
+	\renewcommand{\chord}[3]{\oldchord{#1}{#2}{\sffamily#3}}
+	\newcommand{\atfret}[2]{
+	
+		\parbox[c][3.25em][b]{7pt}{
+	
+				\makebox[10pt]{#1}
+				\makebox[10pt]{\git{\small(#2th fret)}}
+				%\raisebox{-2.5ex}{\git{(#2th fret)}}
+			}
+	}
+	%
+	
+	\input{../chords}
+	
+	\newcommand\chordset[2][]{
+	\ifx&#1&%
+	  % #1 is empty
+	\else
+		\vspace{10pt}
+		\git{#1}\\
+	\fi
+
+	\mbox{#2}\\
+	}
+
+% --> Chords
+
+
+% 	Songs enviroments stuff -->
+	
+	\newcommand{\git}[1]{\color{gray}{\textit{#1}}\color{black}}
+	
+	
+	\newenvironment{myenumerate}{%
+	  \edef\backupindent{\the\parindent}
+	  \begin{enumerate}[label=\color{gray}\theenumi]
+	  \setlength{\parindent}{\backupindent}
+	}{\end{enumerate}}
+	
+	\setlength{\parindent}{0cm}
+	
+	\newenvironment{song}[2]
+	{
+		\begin{center}
+			\section{#1}
+			#2
+		\end{center}
+		\begin{multicols}{2}
+			\normalsize
+			\begin{myenumerate}
+	}{
+			\end{myenumerate}
+		\end{multicols}
+		\newpage
+	}
+	
+	
+	\definecolor{blue}{rgb}{0.2, 0.5, 0.5}
+	\newenvironment{songverse}
+	{
+		\item
+	}{
+	\vspace{10pt}
+	}
+	\newcommand{\ch}[1]{\makebox[0pt][l]{\raisebox{1em}{\color{blue} \sffamily \small #1 }}}
+	
+
+% --> Songs enviroments stuff
+
+
+ %\def\numfrets{4}
+

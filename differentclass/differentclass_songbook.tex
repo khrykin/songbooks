@@ -1,0 +1,32 @@
+\documentclass[10pt,a5paper]{article}
+\def\backgroundimage{cover.png}
+\def\songbooktitle{Different Class}
+%\def\titlefootercolor{white}
+\def\titlecolor{white}
+
+\input{../preamble}
+
+\begin{document}
+% 	Title Page -->	
+	
+	\AddToShipoutPicture*{\BackgroundPic}
+		\maketitle
+		\thispagestyle{fancy}
+		\ClearShipoutPicture
+	
+	\newpage
+%--> Title Page
+	
+	\tableofcontents 
+	\newpage
+	
+%--> Songs includes	
+	
+	\include{misshapes}
+	\include{pencilskirt}
+	\include{commonpeople}
+	\include{disco2000}
+	
+% 	Songs includes -->	
+
+\end{document}
