@@ -7,14 +7,13 @@ real stringsMargin = 5.5pt;
 
 texpreamble("\usepackage{fontspec,xltxtra,xunicode}
 	\usepackage{xcolor}
-	
+	\usepackage{amsmath}
 	\defaultfontfeatures{Mapping=tex-text}
 	\setromanfont[Mapping=tex-text]{Century Schoolbook}
 	\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
 	%\setmonofont[Scale=MatchLowercase]{Monaco}
 	\usepackage[10pt]{moresize}");
 
-defaultpen(fontsize(10pt));
 
 void fretunit(picture pic=currentpicture, pair position=(0,0)) {
 	path unitline = (0,0)--(1,0);
@@ -32,38 +31,19 @@ void fretboard(picture pic=currentpicture, int unitsNum=1) {
 	path clippath = scale(unitsNum *size,5*stringsMargin) * unitsquare;
 	clip(pic,clippath);
 	draw(pic, clippath);
+	draw(pic, shift(0, -0.2/2 * 5*stringsMargin) * scale(1,1.2)* clippath, invisible);
 
 	label(pic,rotate(90) * "\scriptsize TAB", (0,5*stringsMargin/2), W);
 }
 
-void note(picture pic=currentpicture,string label, real pos, int str) {
+void note(picture pic=currentpicture,string label, real pos, real str) {
 	label(pic,"\scriptsize "+label, (pos * size, (6-str)*stringsMargin), black, Fill(white));
 }
 
-
-picture pencilskirt1;
-
-fretboard(pencilskirt1);
-
-note(pencilskirt1,"0", 3 * 1/8, 3);
-note(pencilskirt1,"2", 4 * 1/8, 3);
-note(pencilskirt1,"2", 5 * 1/8, 4);
-note(pencilskirt1,"0", 6 * 1/8, 4);
-note(pencilskirt1,"3", 7 * 1/8, 5);
-
-
-shipout("pencilskirt1",pencilskirt1);
-
-
-
-picture pencilskirt2;
-
-fretboard(pencilskirt2);
-
-note(pencilskirt2,"2h0", 3 * 1/8, 3);
-note(pencilskirt2,"0", 5 * 1/8 , 4);
-note(pencilskirt2,"2h", 6 * 1/8, 4);
-note(pencilskirt2,"0", 6 * 1/8+ 1/16, 4);
-
-
-shipout("pencilskirt2",pencilskirt2);
+void hummeron(picture pic=currentpicture, string hammer, string on, real pos, real width, real str, string sign) {
+	note(pic,"$\mathbf{\overset{\frown}{}}$", pos + width/2, str - 0.9);
+	//note(pic,"\tiny "+sign, pos + width/2, str - 1.6);
+	note(pic,hammer, pos, str);
+	note(pic,on, pos + width, str);
+}
+defaultpen(fontsize(10pt));

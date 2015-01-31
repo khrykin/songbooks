@@ -95,7 +95,7 @@
 		\parbox[c][3.25em][b]{7pt}{
 	
 				\makebox[10pt]{#1}
-				\makebox[10pt]{\git{\footnotesize(#2th fret)}}
+				\makebox[10pt]{\emph{\rmfamily\footnotesize(#2th fret)}}
 				%\raisebox{-2.5ex}{\git{(#2th fret)}}
 			}
 	}
@@ -127,7 +127,7 @@
 
 % 	Songs enviroments stuff -->
 	
-	\newcommand{\git}[1]{\color{gray}{\textit{#1}}\color{black}}
+	\newcommand{\git}[1]{{\color{black}\bfseries\rmfamily\textit{#1}}}
 	
 	
 	\newenvironment{myenumerate}{%
@@ -167,6 +167,7 @@
 	}
 	
 	\definecolor{blue}{rgb}{0.2, 0.5, 0.5}
+%	\definecolor{blue}{rgb}{85/255,61/255,232/255}
 	\newenvironment{songverse}[1][Verse \theversecounter]
 	{
 		\stepcounter{versecounter}
